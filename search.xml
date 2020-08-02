@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>谷歌访问助手2.3.0破解版</title>
-    <url>/posts/uncategorized/29108.html</url>
+    <url>/posts/29108.html</url>
     <content><![CDATA[<p>百度虽好用，但广告一大堆</p>
 <p>所以，上谷歌是一个非常不错的选择，广告少之又少，视觉明朗的界面，看着就舒服，找出的的资料也是非常有用的。</p>
 <p>不多废话，现在谷歌被限制了，所以访问不了，访问也需要 过 ，所以今天一款谷歌助手破解版使用。</p>
@@ -25,7 +25,7 @@
   </entry>
   <entry>
     <title>Linux 部署Java</title>
-    <url>/posts/Linux/50932.html</url>
+    <url>/posts/50932.html</url>
     <content><![CDATA[<p>安装之前先检查一下本地是否存在Java，如果有先卸载<br>卸载老版本</p>
 <h6 id="1-卸载可能存在的CentOS自带的java环境"><a href="#1-卸载可能存在的CentOS自带的java环境" class="headerlink" title="1.卸载可能存在的CentOS自带的java环境"></a>1.卸载可能存在的CentOS自带的java环境</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep java #rpm -qa|grep jdk #rpm -qa|grep gcj</span></span><br></pre></td></tr></table></figure>
 <h6 id="2-如果有的话，就先卸载"><a href="#2-如果有的话，就先卸载" class="headerlink" title="2.如果有的话，就先卸载"></a>2.如果有的话，就先卸载</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -e –nodeps java–1.8.xxxx</span></span><br></pre></td></tr></table></figure>
@@ -46,7 +46,7 @@
   </entry>
   <entry>
     <title>Oracle修改占用内存启动出错</title>
-    <url>/posts/%E6%95%B0%E6%8D%AE%E5%BA%93/26515.html</url>
+    <url>/posts/26515.html</url>
     <content><![CDATA[<p>Oracle 的memory_target参数设置必须大于等于sga_max_size，不小心设置的不一样，结果导致oracle无法启动，</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">startup：</span><br><span class="line">SQL&gt; startup</span><br><span class="line">ORA-00844: Parameter not taking MEMORY_TARGET into account</span><br><span class="line">ORA-00851: SGA_MAX_SIZE 1073741824 cannot be <span class="built_in">set</span> to more than MEMORY_TARGET 805306368.</span><br></pre></td></tr></table></figure>
 <h3 id="解决方式："><a href="#解决方式：" class="headerlink" title="解决方式："></a>解决方式：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sqlplus                 // 进入sqlplus</span><br><span class="line"></span><br><span class="line">conn sys as sysdba      // 连接上Oracle</span><br><span class="line"></span><br><span class="line">create pfile from spfile    // 通过spfile 创建 pfile 文本文件</span><br></pre></td></tr></table></figure>
@@ -69,7 +69,7 @@
   </entry>
   <entry>
     <title>SSM框架整合</title>
-    <url>/posts/JavaWeb/10555.html</url>
+    <url>/posts/10555.html</url>
     <content><![CDATA[<p>SSM（Spring+SpringMVC+MyBatis）框架集由Spring、MyBatis两个开源框架整合而成（SpringMVC是Spring中的部分内容）。常作为数据源较简单的web项目的框架。</p>
 <p><strong>开发环境:</strong></p>
 <ol>
