@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Linux 部署Java</title>
+    <url>/posts/50932.html</url>
+    <content><![CDATA[<p>安装之前先检查一下本地是否存在Java，如果有先卸载<br>卸载老版本</p>
+<h6 id="1-卸载可能存在的CentOS自带的java环境"><a href="#1-卸载可能存在的CentOS自带的java环境" class="headerlink" title="1.卸载可能存在的CentOS自带的java环境"></a>1.卸载可能存在的CentOS自带的java环境</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep java #rpm -qa|grep jdk #rpm -qa|grep gcj</span></span><br></pre></td></tr></table></figure>
+<h6 id="2-如果有的话，就先卸载"><a href="#2-如果有的话，就先卸载" class="headerlink" title="2.如果有的话，就先卸载"></a>2.如果有的话，就先卸载</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -e –nodeps java–1.8.xxxx</span></span><br></pre></td></tr></table></figure>
+<p>接着就可以开始安装了<br><a id="more"></a></p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h5 id="1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz"><a href="#1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz" class="headerlink" title="1.下载java二进制包 https://www.oracle.com/ ； jdk-8u241-linux-x64.tar.gz"></a>1.下载java二进制包 <a href="https://www.oracle.com/">https://www.oracle.com/</a> ； jdk-8u241-linux-x64.tar.gz</h5><h5 id="2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal"><a href="#2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal" class="headerlink" title="2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal"></a>2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar -zxvf jdk-8u241-linux-x64.tar.gz</span></span><br><span class="line"><span class="comment"># mv jdk1.8.0_241 /usr/local</span></span><br></pre></td></tr></table></figure>
+<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><h6 id="1-打开并修改-etc-profile，在文件末尾加入如下内容"><a href="#1-打开并修改-etc-profile，在文件末尾加入如下内容" class="headerlink" title="1.打开并修改/etc/profile，在文件末尾加入如下内容"></a>1.打开并修改/etc/profile，在文件末尾加入如下内容</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">JAVA_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241</span><br><span class="line">JRE_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241/jre</span><br><span class="line">CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib:/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br></pre></td></tr></table></figure>
+<h6 id="2-使环境变量生效"><a href="#2-使环境变量生效" class="headerlink" title="2.使环境变量生效"></a>2.使环境变量生效</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># source /etc/profile</span></span><br></pre></td></tr></table></figure>
+<p>测试安装是否成功<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># java -version</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>谷歌访问助手2.3.0破解版</title>
     <url>/posts/29108.html</url>
     <content><![CDATA[<p>百度虽好用，但广告一大堆</p>
@@ -77,25 +96,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux 部署Java</title>
-    <url>/posts/50932.html</url>
-    <content><![CDATA[<p>安装之前先检查一下本地是否存在Java，如果有先卸载<br>卸载老版本</p>
-<h6 id="1-卸载可能存在的CentOS自带的java环境"><a href="#1-卸载可能存在的CentOS自带的java环境" class="headerlink" title="1.卸载可能存在的CentOS自带的java环境"></a>1.卸载可能存在的CentOS自带的java环境</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep java #rpm -qa|grep jdk #rpm -qa|grep gcj</span></span><br></pre></td></tr></table></figure>
-<h6 id="2-如果有的话，就先卸载"><a href="#2-如果有的话，就先卸载" class="headerlink" title="2.如果有的话，就先卸载"></a>2.如果有的话，就先卸载</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -e –nodeps java–1.8.xxxx</span></span><br></pre></td></tr></table></figure>
-<p>接着就可以开始安装了<br><a id="more"></a></p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h5 id="1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz"><a href="#1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz" class="headerlink" title="1.下载java二进制包 https://www.oracle.com/ ； jdk-8u241-linux-x64.tar.gz"></a>1.下载java二进制包 <a href="https://www.oracle.com/">https://www.oracle.com/</a> ； jdk-8u241-linux-x64.tar.gz</h5><h5 id="2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal"><a href="#2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal" class="headerlink" title="2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal"></a>2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar -zxvf jdk-8u241-linux-x64.tar.gz</span></span><br><span class="line"><span class="comment"># mv jdk1.8.0_241 /usr/local</span></span><br></pre></td></tr></table></figure>
-<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><h6 id="1-打开并修改-etc-profile，在文件末尾加入如下内容"><a href="#1-打开并修改-etc-profile，在文件末尾加入如下内容" class="headerlink" title="1.打开并修改/etc/profile，在文件末尾加入如下内容"></a>1.打开并修改/etc/profile，在文件末尾加入如下内容</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">JAVA_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241</span><br><span class="line">JRE_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241/jre</span><br><span class="line">CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib:/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br></pre></td></tr></table></figure>
-<h6 id="2-使环境变量生效"><a href="#2-使环境变量生效" class="headerlink" title="2.使环境变量生效"></a>2.使环境变量生效</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># source /etc/profile</span></span><br></pre></td></tr></table></figure>
-<p>测试安装是否成功<br><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># java -version</span></span><br></pre></td></tr></table></figure></p>
-]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SSM框架整合</title>
     <url>/posts/10555.html</url>
     <content><![CDATA[<p>SSM（Spring+SpringMVC+MyBatis）框架集由Spring、MyBatis两个开源框架整合而成（SpringMVC是Spring中的部分内容）。常作为数据源较简单的web项目的框架。</p>
@@ -138,7 +138,8 @@
 <blockquote>
 <p>service 层 实现类<br><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> com.biz;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.entity.User;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Service;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserBizImpl</span> <span class="keyword">implements</span> <span class="title">UserBiz</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;User&gt; <span class="title">getAll</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;查询所有;业务层&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> User <span class="title">getUserById</span><span class="params">(Integer id)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h3 id="1-2-SSM架构已搭建好了后-就把-spring-的配置文件配置好"><a href="#1-2-SSM架构已搭建好了后-就把-spring-的配置文件配置好" class="headerlink" title="1.2 SSM架构已搭建好了后 就把 spring 的配置文件配置好"></a>1.2 SSM架构已搭建好了后 就把 spring 的配置文件配置好</h3><p>因为使用maven 构建，他的 配置文件 和 代码 是分开的<br><img src="" data-echo="http://chuang.yinaun.com/FkowJAyueYLQaBbPiLxiKWW5qGjU.png" alt="applicationContext.xml">  </p>
+<h3 id="1-2-SSM架构已搭建好了后-就把-spring-的配置文件配置好"><a href="#1-2-SSM架构已搭建好了后-就把-spring-的配置文件配置好" class="headerlink" title="1.2 SSM架构已搭建好了后 就把 spring 的配置文件配置好"></a>1.2 SSM架构已搭建好了后 就把 spring 的配置文件配置好</h3><p>因为使用maven 构建，他的 配置文件 和 代码 是分开的  </p>
+<p><img src="" data-echo="http://chuang.yinaun.com/FkowJAyueYLQaBbPiLxiKWW5qGjU.png" alt="applicationContext.xml">  </p>
 <blockquote>
 <p>applicationContext.xml<br><figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">beans</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://www.springframework.org/schema/beans&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:xsi</span>=<span class="string">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xmlns:context</span>=<span class="string">&quot;http://www.springframework.org/schema/context&quot;</span></span></span><br><span class="line"><span class="tag">       <span class="attr">xsi:schemaLocation</span>=<span class="string">&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd&quot;</span>&gt;</span></span><br><span class="line">       </span><br><span class="line">    <span class="comment">&lt;!--开启注解的扫描--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">context:component-scan</span> <span class="attr">base-package</span>=<span class="string">&quot;com&quot;</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">beans</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
 </blockquote>
