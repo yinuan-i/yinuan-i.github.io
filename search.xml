@@ -8,19 +8,67 @@
 <p>不多废话，现在谷歌被限制了，所以访问不了，访问也需要 过 ，所以今天一款谷歌助手破解版使用。</p>
 <h3 id="先得下载，已经打包在下面了"><a href="#先得下载，已经打包在下面了" class="headerlink" title="先得下载，已经打包在下面了"></a>先得下载，已经打包在下面了</h3><a id="more"></a>
 <p><a href="https://www.lanzous.com/i8sb2aj">https://www.lanzous.com/i8sb2aj</a></p>
-<p><strong>然后就解压，像下面这样</strong></p>
-<hr>
-<ol start="2">
+<ol>
+<li><p>然后就解压，像下面这样<br><img src="http://chuang.yinaun.com/FlNC_oIjgobehabqwkOvpf0fqvGd.png" alt="d"></p>
+</li>
 <li><p>接着 打开我们的浏览器 点击右侧三个点点，找到更多工具，扩展中心</p>
 </li>
-<li><p>最后 打开开发者模式 点击加载已解压的扩展程序，选择我们刚刚下载解压后的文件夹即可，然后就安装成功啦，如果没有显示可以重启一下浏览器</p>
-</li>
-<li><p>记住导入完后文件不要删除，别人浏览器就获取不到了还有就是只能访问谷歌页面</p>
-</li>
+</ol>
+<p><img src="http://chuang.yinaun.com/FiMsL4M-y59QRPeiWEbLqBFkNzss.png" alt="d"></p>
+<ol start="3">
+<li>最后 打开开发者模式 点击加载已解压的扩展程序，选择我们刚刚下载解压后的文件夹即可，然后就安装成功啦，如果没有显示可以重启一下浏览器<br><img src="http://chuang.yinaun.com/FlshvbZUTxP-Zo5bpm3HLOhOj_dg.png" alt="d"></li>
+</ol>
+<p><img src="http://chuang.yinaun.com/FrmxUWmH1YWNeSnUwKJryQ6IVZuU.png" alt="d"></p>
+<ol start="4">
+<li>记住导入完后文件不要删除，别人浏览器就获取不到了还有就是只能访问谷歌页面</li>
 </ol>
 ]]></content>
       <tags>
         <tag>Google</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux 部署Java</title>
+    <url>/posts/50932.html</url>
+    <content><![CDATA[<p>安装之前先检查一下本地是否存在Java，如果有先卸载<br>卸载老版本</p>
+<h6 id="1-卸载可能存在的CentOS自带的java环境"><a href="#1-卸载可能存在的CentOS自带的java环境" class="headerlink" title="1.卸载可能存在的CentOS自带的java环境"></a>1.卸载可能存在的CentOS自带的java环境</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep java #rpm -qa|grep jdk #rpm -qa|grep gcj</span></span><br></pre></td></tr></table></figure>
+<h6 id="2-如果有的话，就先卸载"><a href="#2-如果有的话，就先卸载" class="headerlink" title="2.如果有的话，就先卸载"></a>2.如果有的话，就先卸载</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -e –nodeps java–1.8.xxxx</span></span><br></pre></td></tr></table></figure>
+<p>接着就可以开始安装了</p>
+<a id="more"></a>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h5 id="1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz"><a href="#1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz" class="headerlink" title="1.下载java二进制包 https://www.oracle.com/ ； jdk-8u241-linux-x64.tar.gz"></a>1.下载java二进制包 <a href="https://www.oracle.com/">https://www.oracle.com/</a> ； jdk-8u241-linux-x64.tar.gz</h5><h5 id="2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal"><a href="#2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal" class="headerlink" title="2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal"></a>2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar -zxvf jdk-8u241-linux-x64.tar.gz</span></span><br><span class="line"><span class="comment"># mv jdk1.8.0_241 /usr/local</span></span><br></pre></td></tr></table></figure>
+<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><h6 id="1-打开并修改-etc-profile，在文件末尾加入如下内容"><a href="#1-打开并修改-etc-profile，在文件末尾加入如下内容" class="headerlink" title="1.打开并修改/etc/profile，在文件末尾加入如下内容"></a>1.打开并修改/etc/profile，在文件末尾加入如下内容</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">JAVA_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241</span><br><span class="line">JRE_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241/jre</span><br><span class="line">CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib:/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br></pre></td></tr></table></figure>
+<h6 id="2-使环境变量生效"><a href="#2-使环境变量生效" class="headerlink" title="2.使环境变量生效"></a>2.使环境变量生效</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># source /etc/profile</span></span><br></pre></td></tr></table></figure>
+<p>测试安装是否成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># java -version</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Oracle修改占用内存启动出错</title>
+    <url>/posts/26515.html</url>
+    <content><![CDATA[<p>Oracle 的memory_target参数设置必须大于等于sga_max_size，不小心设置的不一样，结果导致oracle无法启动，</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">startup：</span><br><span class="line">SQL&gt; startup</span><br><span class="line">ORA-00844: Parameter not taking MEMORY_TARGET into account</span><br><span class="line">ORA-00851: SGA_MAX_SIZE 1073741824 cannot be <span class="built_in">set</span> to more than MEMORY_TARGET 805306368.</span><br></pre></td></tr></table></figure>
+<h3 id="解决方式："><a href="#解决方式：" class="headerlink" title="解决方式："></a>解决方式：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sqlplus                 // 进入sqlplus</span><br><span class="line"></span><br><span class="line">conn sys as sysdba      // 连接上Oracle</span><br><span class="line"></span><br><span class="line">create pfile from spfile    // 通过spfile 创建 pfile 文本文件</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>因为上面需要修改的参数在文件 spfile 是以二进制储存，无法直接修改，但是可以通过spfile创建的pfile是 文本文件，可以进行直接修改。<br>spfile位置ORACLE_HOME/database/SPFILExxx.ORA(oracle11g)(也就是你解压的安装包目录)。<br>创建的pfile在同目录下文件名成为：INITxxx.ORA, xxx是实例名称.  </p>
+</blockquote>
+<h3 id="修改INITxxx-ORA，找到-memory-target-修改为sga-max-size的大小或者删除掉，保存一下。"><a href="#修改INITxxx-ORA，找到-memory-target-修改为sga-max-size的大小或者删除掉，保存一下。" class="headerlink" title="修改INITxxx.ORA，找到 memory_target 修改为sga_max_size的大小或者删除掉，保存一下。"></a>修改INITxxx.ORA，找到 memory_target 修改为sga_max_size的大小或者删除掉，保存一下。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">create spfile from pfile         //会通过 pfile 创建 spfile</span><br><span class="line"></span><br><span class="line">startup     //可以成功启动了</span><br></pre></td></tr></table></figure>
+<hr>
+<blockquote>
+<p>***创建的pfile 文件在 （解压的Oracle安装包目录/database/SPFILExxx.ORA）; 修改后使用命令将pfile 创建为spfile<br>然后使用命令启动数据库就行了</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>Oracle</tag>
       </tags>
   </entry>
   <entry>
@@ -67,50 +115,6 @@
       <tags>
         <tag>数据库</tag>
         <tag>Hibernate</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux 部署Java</title>
-    <url>/posts/50932.html</url>
-    <content><![CDATA[<p>安装之前先检查一下本地是否存在Java，如果有先卸载<br>卸载老版本</p>
-<h6 id="1-卸载可能存在的CentOS自带的java环境"><a href="#1-卸载可能存在的CentOS自带的java环境" class="headerlink" title="1.卸载可能存在的CentOS自带的java环境"></a>1.卸载可能存在的CentOS自带的java环境</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep java #rpm -qa|grep jdk #rpm -qa|grep gcj</span></span><br></pre></td></tr></table></figure>
-<h6 id="2-如果有的话，就先卸载"><a href="#2-如果有的话，就先卸载" class="headerlink" title="2.如果有的话，就先卸载"></a>2.如果有的话，就先卸载</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -e –nodeps java–1.8.xxxx</span></span><br></pre></td></tr></table></figure>
-<p>接着就可以开始安装了</p>
-<a id="more"></a>
-
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h5 id="1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz"><a href="#1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz" class="headerlink" title="1.下载java二进制包 https://www.oracle.com/ ； jdk-8u241-linux-x64.tar.gz"></a>1.下载java二进制包 <a href="https://www.oracle.com/">https://www.oracle.com/</a> ； jdk-8u241-linux-x64.tar.gz</h5><h5 id="2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal"><a href="#2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal" class="headerlink" title="2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal"></a>2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar -zxvf jdk-8u241-linux-x64.tar.gz</span></span><br><span class="line"><span class="comment"># mv jdk1.8.0_241 /usr/local</span></span><br></pre></td></tr></table></figure>
-<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><h6 id="1-打开并修改-etc-profile，在文件末尾加入如下内容"><a href="#1-打开并修改-etc-profile，在文件末尾加入如下内容" class="headerlink" title="1.打开并修改/etc/profile，在文件末尾加入如下内容"></a>1.打开并修改/etc/profile，在文件末尾加入如下内容</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">JAVA_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241</span><br><span class="line">JRE_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241/jre</span><br><span class="line">CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib:/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br></pre></td></tr></table></figure>
-<h6 id="2-使环境变量生效"><a href="#2-使环境变量生效" class="headerlink" title="2.使环境变量生效"></a>2.使环境变量生效</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># source /etc/profile</span></span><br></pre></td></tr></table></figure>
-<p>测试安装是否成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># java -version</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Oracle修改占用内存启动出错</title>
-    <url>/posts/26515.html</url>
-    <content><![CDATA[<p>Oracle 的memory_target参数设置必须大于等于sga_max_size，不小心设置的不一样，结果导致oracle无法启动，</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">startup：</span><br><span class="line">SQL&gt; startup</span><br><span class="line">ORA-00844: Parameter not taking MEMORY_TARGET into account</span><br><span class="line">ORA-00851: SGA_MAX_SIZE 1073741824 cannot be <span class="built_in">set</span> to more than MEMORY_TARGET 805306368.</span><br></pre></td></tr></table></figure>
-<h3 id="解决方式："><a href="#解决方式：" class="headerlink" title="解决方式："></a>解决方式：</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sqlplus                 // 进入sqlplus</span><br><span class="line"></span><br><span class="line">conn sys as sysdba      // 连接上Oracle</span><br><span class="line"></span><br><span class="line">create pfile from spfile    // 通过spfile 创建 pfile 文本文件</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>因为上面需要修改的参数在文件 spfile 是以二进制储存，无法直接修改，但是可以通过spfile创建的pfile是 文本文件，可以进行直接修改。<br>spfile位置ORACLE_HOME/database/SPFILExxx.ORA(oracle11g)(也就是你解压的安装包目录)。<br>创建的pfile在同目录下文件名成为：INITxxx.ORA, xxx是实例名称.  </p>
-</blockquote>
-<h3 id="修改INITxxx-ORA，找到-memory-target-修改为sga-max-size的大小或者删除掉，保存一下。"><a href="#修改INITxxx-ORA，找到-memory-target-修改为sga-max-size的大小或者删除掉，保存一下。" class="headerlink" title="修改INITxxx.ORA，找到 memory_target 修改为sga_max_size的大小或者删除掉，保存一下。"></a>修改INITxxx.ORA，找到 memory_target 修改为sga_max_size的大小或者删除掉，保存一下。</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">create spfile from pfile         //会通过 pfile 创建 spfile</span><br><span class="line"></span><br><span class="line">startup     //可以成功启动了</span><br></pre></td></tr></table></figure>
-<hr>
-<blockquote>
-<p>***创建的pfile 文件在 （解压的Oracle安装包目录/database/SPFILExxx.ORA）; 修改后使用命令将pfile 创建为spfile<br>然后使用命令启动数据库就行了</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>Oracle</tag>
       </tags>
   </entry>
   <entry>
