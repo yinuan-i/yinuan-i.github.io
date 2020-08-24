@@ -123,7 +123,8 @@
   <entry>
     <title>idea两种导入jar包方式</title>
     <url>/posts/5092.html</url>
-    <content><![CDATA[<h2 id="一、在项目结构里导入"><a href="#一、在项目结构里导入" class="headerlink" title="一、在项目结构里导入"></a>一、在项目结构里导入</h2><ol>
+    <content><![CDATA[<p><meta name="referrer" content="no-referrer"/></p>
+<h2 id="一、在项目结构里导入"><a href="#一、在项目结构里导入" class="headerlink" title="一、在项目结构里导入"></a>一、在项目结构里导入</h2><ol>
 <li>点击左上角的 文件(file) –&gt;项目结构（Project Structure）</li>
 </ol>
 <p><img src="" data-echo="https://chuang.yinaun.com/Fsx3SEnprJn4KVEVJR1xm3Xe3VIm.png" alt="image-20200820085027907"></p>
