@@ -245,6 +245,7 @@
 <p>如环境不需要分配那么大的内存来支撑Oracle，可通过修改 sga_max_size 的值来减少系统中内存占用过大问题。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cmd sqlplus system    --账户登录</span><br><span class="line"></span><br><span class="line">show parameter sga; --显示内存分配情况</span><br><span class="line"></span><br><span class="line">alter system set sga_max_size=200m scope=spfile; --修改占用内存的大小，根据需要设置</span><br><span class="line"></span><br><span class="line">alter system set memory_target = 200M scope=spfile;  --修改目标内存占用大小，根据需要设置</span><br><span class="line"></span><br><span class="line">重启oracle服务</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
+
 <p><strong>注意：</strong><br><strong>sga_target &lt;= sga_max_size &lt;= memory_target &lt;= memory_max_target</strong></p>
 <h2 id="如果误修改导致数据库无法启动，按以下步骤处理："><a href="#如果误修改导致数据库无法启动，按以下步骤处理：" class="headerlink" title="如果误修改导致数据库无法启动，按以下步骤处理："></a>如果误修改导致数据库无法启动，按以下步骤处理：</h2><p>(解决SGA_MAX_SIZE 的大小比 MEMORY_TARGET 大导致数据无法启动的错误)</p>
 <p>由于数据库无法启动，只能调整编辑启动参数文件：<a href="/posts/26515.html">Oracle修改占用内存启动出错</a></p>
