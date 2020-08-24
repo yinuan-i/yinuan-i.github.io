@@ -318,11 +318,11 @@
 <h2 id="一、在项目结构里导入"><a href="#一、在项目结构里导入" class="headerlink" title="一、在项目结构里导入"></a>一、在项目结构里导入</h2><ol>
 <li>点击左上角的 文件(file) –&gt;项目结构（Project Structure）</li>
 </ol>
-<p><img src="https://chuang.yinaun.com/Fsx3SEnprJn4KVEVJR1xm3Xe3VIm.png" alt="image-20200820085027907"></p>
+<p><img src="" data-echo="https://chuang.yinaun.com/Fsx3SEnprJn4KVEVJR1xm3Xe3VIm.png" alt="image-20200820085027907"></p>
 <ol start="2">
 <li>找到模块（Modules） —&gt; 依赖 （Dependencies）</li>
 </ol>
-<p><img src="https://chuang.yinaun.com/FvIOA7UKb4ml37wdsp2taA-BS7ea.png" alt="image-20200820085332294"></p>
+<p><img src="" data-echo="https://chuang.yinaun.com/FvIOA7UKb4ml37wdsp2taA-BS7ea.png" alt="image-20200820085332294"></p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/5092.html#more" rel="contents">
@@ -402,9 +402,6 @@
 
       
           <h1 id="主键生成策略，可以在id属性中配置"><a href="#主键生成策略，可以在id属性中配置" class="headerlink" title="主键生成策略，可以在id属性中配置"></a>主键生成策略，可以在id属性中配置</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;id name=<span class="string">&quot;userld&quot;</span>&gt;</span><br><span class="line">  &lt;generator <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;sequence&quot;</span>&gt;</span><br><span class="line">          &lt;param name=&quot;sequence_name&quot;&gt;seq_name&lt;/param&gt;</span><br><span class="line">  &lt;/generator&gt;</span><br><span class="line">/id&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
 <h1 id="assigned"><a href="#assigned" class="headerlink" title="assigned"></a>assigned</h1><p>assigned主键策略需要在添加数据时自己设置id，因为它不能自动生成id，  </p>
 <p>Hibernate不负责主键生成。与Hibernate和底层数据库都无关，可以跨数据库。在存储对象前，必须要使用主键的setter方法给主键赋值，至于这个值怎么生成，完全由自己决定。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">id</span> <span class="attr">name</span>=<span class="string">&quot;id&quot;</span> <span class="attr">column</span>=<span class="string">&quot;id&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">generator</span> <span class="attr">class</span>=<span class="string">&quot;assigned&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">id</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -466,7 +463,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-18 13:53:45" itemprop="dateModified" datetime="2020-08-18T13:53:45+08:00">2020-08-18</time>
+                <time title="修改时间：2020-08-24 09:43:18" itemprop="dateModified" datetime="2020-08-24T09:43:18+08:00">2020-08-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -489,7 +486,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>SSM（Spring+SpringMVC+MyBatis）框架集由Spring、MyBatis两个开源框架整合而成（SpringMVC是Spring中的部分内容）。常作为数据源较简单的web项目的框架。</p>
+          <meta name="referrer" content="no-referrer" />
+
+<p>SSM（Spring+SpringMVC+MyBatis）框架集由Spring、MyBatis两个开源框架整合而成（SpringMVC是Spring中的部分内容）。常作为数据源较简单的web项目的框架。</p>
 <p><strong>开发环境:</strong></p>
 <ol>
 <li>开发工具:Idea 2020.1.2</li>
@@ -555,7 +554,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-24 09:12:08" itemprop="dateModified" datetime="2020-08-24T09:12:08+08:00">2020-08-24</time>
+                <time title="修改时间：2020-08-24 09:43:09" itemprop="dateModified" datetime="2020-08-24T09:43:09+08:00">2020-08-24</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -578,10 +577,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>Oracle 的memory_target参数设置必须大于等于sga_max_size，不小心设置的不一样，结果导致oracle无法启动，</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">startup：</span><br><span class="line">SQL&gt; startup</span><br><span class="line">ORA-00844: Parameter not taking MEMORY_TARGET into account</span><br><span class="line">ORA-00851: SGA_MAX_SIZE 1073741824 cannot be <span class="built_in">set</span> to more than MEMORY_TARGET 805306368.</span><br></pre></td></tr></table></figure>
+          <p><meta name="referrer" content="no-referrer" /><br>Oracle 的memory_target参数设置必须大于等于sga_max_size，不小心设置的不一样，结果导致oracle无法启动，<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">startup：</span><br><span class="line">SQL&gt; startup</span><br><span class="line">ORA-00844: Parameter not taking MEMORY_TARGET into account</span><br><span class="line">ORA-00851: SGA_MAX_SIZE 1073741824 cannot be <span class="built_in">set</span> to more than MEMORY_TARGET 805306368.</span><br></pre></td></tr></table></figure></p>
 <h3 id="解决方式："><a href="#解决方式：" class="headerlink" title="解决方式："></a>解决方式：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sqlplus /nolog            // 进入sqlplus</span><br><span class="line"></span><br><span class="line">conn sys as sysdba      // 连接上Oracle</span><br><span class="line"></span><br><span class="line">create pfile from spfile    // 通过spfile 创建 pfile 文本文件</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>因为上面需要修改的参数在文件 spfile 是以二进制储存，无法直接修改，但是可以通过spfile创建的pfile是 文本文件，可以进行直接修改。<br>spfile位置ORACLE_HOME/database/SPFILExxx.ORA(oracle11g)(也就是你解压的安装包目录)。<br>创建的pfile在同目录下文件名成为：INITxxx.ORA, xxx是实例名称.  </p>
 </blockquote>
@@ -662,7 +659,7 @@
           <p>安装之前先检查一下本地是否存在Java，如果有先卸载<br>卸载老版本</p>
 <h6 id="1-卸载可能存在的CentOS自带的java环境"><a href="#1-卸载可能存在的CentOS自带的java环境" class="headerlink" title="1.卸载可能存在的CentOS自带的java环境"></a>1.卸载可能存在的CentOS自带的java环境</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep java #rpm -qa|grep jdk #rpm -qa|grep gcj</span></span><br></pre></td></tr></table></figure>
 <h6 id="2-如果有的话，就先卸载"><a href="#2-如果有的话，就先卸载" class="headerlink" title="2.如果有的话，就先卸载"></a>2.如果有的话，就先卸载</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># rpm -e –nodeps java–1.8.xxxx</span></span><br></pre></td></tr></table></figure>
-<p>接着就可以开始安装了</p>
+<p>接着就可以开始安装了<br>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/50932.html#more" rel="contents">
@@ -720,7 +717,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-20 10:41:09" itemprop="dateModified" datetime="2020-08-20T10:41:09+08:00">2020-08-20</time>
+                <time title="修改时间：2020-08-24 09:42:16" itemprop="dateModified" datetime="2020-08-24T09:42:16+08:00">2020-08-24</time>
               </span>
 
           
@@ -734,7 +731,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>百度虽好用，但广告一大堆</p>
+          <meta name="referrer" content="no-referrer" />
+
+<p>百度虽好用，但广告一大堆</p>
 <p>所以，上谷歌是一个非常不错的选择，广告少之又少，视觉明朗的界面，看着就舒服，找出的的资料也是非常有用的。</p>
 <p>不多废话，现在谷歌被限制了，所以访问不了，访问也需要 过 ，所以今天一款谷歌助手破解版使用。</p>
 <h3 id="先得下载，已经打包在下面了"><a href="#先得下载，已经打包在下面了" class="headerlink" title="先得下载，已经打包在下面了"></a>先得下载，已经打包在下面了</h3>
