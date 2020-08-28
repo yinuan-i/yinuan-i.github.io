@@ -1,56 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>谷歌访问助手2.3.0破解版</title>
-    <url>/posts/29108.html</url>
-    <content><![CDATA[<meta name="referrer" content="no-referrer" />
-
-<p>百度虽好用，但广告一大堆</p>
-<p>所以，上谷歌是一个非常不错的选择，广告少之又少，视觉明朗的界面，看着就舒服，找出的的资料也是非常有用的。</p>
-<p>不多废话，现在谷歌被限制了，所以访问不了，访问也需要 过 ，所以今天一款谷歌助手破解版使用。</p>
-<h3 id="先得下载，已经打包在下面了"><a href="#先得下载，已经打包在下面了" class="headerlink" title="先得下载，已经打包在下面了"></a>先得下载，已经打包在下面了</h3><a id="more"></a>
-<p><a href="https://www.lanzous.com/i8sb2aj">https://www.lanzous.com/i8sb2aj</a></p>
-<ol>
-<li><p>然后就解压，像下面这样<br><img src="http://chuang.yinaun.com/FlNC_oIjgobehabqwkOvpf0fqvGd.png" alt="d"></p>
-</li>
-<li><p>接着 打开我们的浏览器 点击右侧三个点点，找到更多工具，扩展中心</p>
-</li>
-</ol>
-<p><img src="http://chuang.yinaun.com/FiMsL4M-y59QRPeiWEbLqBFkNzss.png" alt="d"></p>
-<ol start="3">
-<li>最后 打开开发者模式 点击加载已解压的扩展程序，选择我们刚刚下载解压后的文件夹即可，然后就安装成功啦，如果没有显示可以重启一下浏览器<br><img src="http://chuang.yinaun.com/FlshvbZUTxP-Zo5bpm3HLOhOj_dg.png" alt="d"></li>
-</ol>
-<p><img src="http://chuang.yinaun.com/FrmxUWmH1YWNeSnUwKJryQ6IVZuU.png" alt="d"></p>
-<ol start="4">
-<li>记住导入完后文件不要删除，别人浏览器就获取不到了还有就是只能访问谷歌页面</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>Google</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Linux 部署Java</title>
-    <url>/posts/50932.html</url>
-    <content><![CDATA[<p>安装之前先检查一下本地是否存在Java，如果有先卸载<br>卸载老版本</p>
-<h6 id="1-卸载可能存在的CentOS自带的java环境"><a href="#1-卸载可能存在的CentOS自带的java环境" class="headerlink" title="1.卸载可能存在的CentOS自带的java环境"></a>1.卸载可能存在的CentOS自带的java环境</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep java #rpm -qa|grep jdk #rpm -qa|grep gcj</span></span><br></pre></td></tr></table></figure>
-<h6 id="2-如果有的话，就先卸载"><a href="#2-如果有的话，就先卸载" class="headerlink" title="2.如果有的话，就先卸载"></a>2.如果有的话，就先卸载</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -e –nodeps java–1.8.xxxx</span></span><br></pre></td></tr></table></figure>
-<p>接着就可以开始安装了</p>
-<a id="more"></a>
-
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h5 id="1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz"><a href="#1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz" class="headerlink" title="1.下载java二进制包 https://www.oracle.com/ ； jdk-8u241-linux-x64.tar.gz"></a>1.下载java二进制包 <a href="https://www.oracle.com/">https://www.oracle.com/</a> ； jdk-8u241-linux-x64.tar.gz</h5><h5 id="2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal"><a href="#2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal" class="headerlink" title="2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal"></a>2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar -zxvf jdk-8u241-linux-x64.tar.gz</span></span><br><span class="line"><span class="comment"># mv jdk1.8.0_241 /usr/local</span></span><br></pre></td></tr></table></figure>
-<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><h6 id="1-打开并修改-etc-profile，在文件末尾加入如下内容"><a href="#1-打开并修改-etc-profile，在文件末尾加入如下内容" class="headerlink" title="1.打开并修改/etc/profile，在文件末尾加入如下内容"></a>1.打开并修改/etc/profile，在文件末尾加入如下内容</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">JAVA_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241</span><br><span class="line">JRE_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241/jre</span><br><span class="line">CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib:/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br></pre></td></tr></table></figure>
-<h6 id="2-使环境变量生效"><a href="#2-使环境变量生效" class="headerlink" title="2.使环境变量生效"></a>2.使环境变量生效</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># source /etc/profile</span></span><br></pre></td></tr></table></figure>
-<p>测试安装是否成功</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># java -version</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hibernate常见的主键生成策略</title>
     <url>/posts/18235.html</url>
     <content><![CDATA[<h1 id="主键生成策略，可以在id属性中配置"><a href="#主键生成策略，可以在id属性中配置" class="headerlink" title="主键生成策略，可以在id属性中配置"></a>主键生成策略，可以在id属性中配置</h1><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">&lt;id name=<span class="string">&quot;userld&quot;</span>&gt;</span><br><span class="line">  &lt;generator <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;sequence&quot;</span>&gt;</span><br><span class="line">          &lt;param name=&quot;sequence_name&quot;&gt;seq_name&lt;/param&gt;</span><br><span class="line">  &lt;/generator&gt;</span><br><span class="line">/id&gt;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -97,6 +47,75 @@
       </tags>
   </entry>
   <entry>
+    <title>Linux 部署Java</title>
+    <url>/posts/50932.html</url>
+    <content><![CDATA[<p>安装之前先检查一下本地是否存在Java，如果有先卸载<br>卸载老版本</p>
+<h6 id="1-卸载可能存在的CentOS自带的java环境"><a href="#1-卸载可能存在的CentOS自带的java环境" class="headerlink" title="1.卸载可能存在的CentOS自带的java环境"></a>1.卸载可能存在的CentOS自带的java环境</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -qa|grep java #rpm -qa|grep jdk #rpm -qa|grep gcj</span></span><br></pre></td></tr></table></figure>
+<h6 id="2-如果有的话，就先卸载"><a href="#2-如果有的话，就先卸载" class="headerlink" title="2.如果有的话，就先卸载"></a>2.如果有的话，就先卸载</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># rpm -e –nodeps java–1.8.xxxx</span></span><br></pre></td></tr></table></figure>
+<p>接着就可以开始安装了</p>
+<a id="more"></a>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><h5 id="1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz"><a href="#1-下载java二进制包-https-www-oracle-com-；-jdk-8u241-linux-x64-tar-gz" class="headerlink" title="1.下载java二进制包 https://www.oracle.com/ ； jdk-8u241-linux-x64.tar.gz"></a>1.下载java二进制包 <a href="https://www.oracle.com/">https://www.oracle.com/</a> ； jdk-8u241-linux-x64.tar.gz</h5><h5 id="2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal"><a href="#2-通过winscp或其他方式上传到CentOS8系统，解压缩，移到到-usr-ocal" class="headerlink" title="2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal"></a>2.通过winscp或其他方式上传到CentOS8系统，解压缩，移到到/usr/ocal</h5><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># tar -zxvf jdk-8u241-linux-x64.tar.gz</span></span><br><span class="line"><span class="comment"># mv jdk1.8.0_241 /usr/local</span></span><br></pre></td></tr></table></figure>
+<h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><h6 id="1-打开并修改-etc-profile，在文件末尾加入如下内容"><a href="#1-打开并修改-etc-profile，在文件末尾加入如下内容" class="headerlink" title="1.打开并修改/etc/profile，在文件末尾加入如下内容"></a>1.打开并修改/etc/profile，在文件末尾加入如下内容</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">JAVA_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241</span><br><span class="line">JRE_HOME=/usr/<span class="built_in">local</span>/jdk1.8.0_241/jre</span><br><span class="line">CLASSPATH=.:<span class="variable">$JAVA_HOME</span>/lib:/dt.jar:<span class="variable">$JAVA_HOME</span>/lib/tools.jar</span><br><span class="line">PATH=<span class="variable">$PATH</span>:<span class="variable">$JAVA_HOME</span>/bin</span><br></pre></td></tr></table></figure>
+<h6 id="2-使环境变量生效"><a href="#2-使环境变量生效" class="headerlink" title="2.使环境变量生效"></a>2.使环境变量生效</h6><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># source /etc/profile</span></span><br></pre></td></tr></table></figure>
+<p>测试安装是否成功</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># java -version</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Oracle内存占用过大</title>
+    <url>/posts/21786.html</url>
+    <content><![CDATA[<p>安装Oracle时，为了均衡电脑性能和数据库性能，Oracle一个实例默认内存占用大小为物理内存的1/8。</p>
+<p>如环境不需要分配那么大的内存来支撑Oracle，可通过修改 sga_max_size 的值来减少系统中内存占用过大问题。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cmd sqlplus system    --账户登录</span><br><span class="line"></span><br><span class="line">show parameter sga; --显示内存分配情况</span><br><span class="line"></span><br><span class="line">alter system set sga_max_size=200m scope=spfile; --修改占用内存的大小，根据需要设置</span><br><span class="line"></span><br><span class="line">alter system set memory_target = 200M scope=spfile;  --修改目标内存占用大小，根据需要设置</span><br><span class="line"></span><br><span class="line">重启oracle服务</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<p><strong>注意：</strong><br><strong>sga_target &lt;= sga_max_size &lt;= memory_target &lt;= memory_max_target</strong></p>
+<h2 id="如果误修改导致数据库无法启动，按以下步骤处理："><a href="#如果误修改导致数据库无法启动，按以下步骤处理：" class="headerlink" title="如果误修改导致数据库无法启动，按以下步骤处理："></a>如果误修改导致数据库无法启动，按以下步骤处理：</h2><p>(解决SGA_MAX_SIZE 的大小比 MEMORY_TARGET 大导致数据无法启动的错误)</p>
+<p>由于数据库无法启动，只能调整编辑启动参数文件：<a href="/posts/26515.html">Oracle修改占用内存启动出错</a></p>
+]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>Oracle</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>谷歌访问助手2.3.0破解版</title>
+    <url>/posts/29108.html</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer" />
+
+<p>百度虽好用，但广告一大堆</p>
+<p>所以，上谷歌是一个非常不错的选择，广告少之又少，视觉明朗的界面，看着就舒服，找出的的资料也是非常有用的。</p>
+<p>不多废话，现在谷歌被限制了，所以访问不了，访问也需要 过 ，所以今天一款谷歌助手破解版使用。</p>
+<h3 id="先得下载，已经打包在下面了"><a href="#先得下载，已经打包在下面了" class="headerlink" title="先得下载，已经打包在下面了"></a>先得下载，已经打包在下面了</h3><a id="more"></a>
+<p><a href="https://www.lanzous.com/i8sb2aj">https://www.lanzous.com/i8sb2aj</a></p>
+<ol>
+<li><p>然后就解压，像下面这样<br><img src="http://chuang.yinaun.com/FlNC_oIjgobehabqwkOvpf0fqvGd.png" alt="d"></p>
+</li>
+<li><p>接着 打开我们的浏览器 点击右侧三个点点，找到更多工具，扩展中心</p>
+</li>
+</ol>
+<p><img src="http://chuang.yinaun.com/FiMsL4M-y59QRPeiWEbLqBFkNzss.png" alt="d"></p>
+<ol start="3">
+<li>最后 打开开发者模式 点击加载已解压的扩展程序，选择我们刚刚下载解压后的文件夹即可，然后就安装成功啦，如果没有显示可以重启一下浏览器<br><img src="http://chuang.yinaun.com/FlshvbZUTxP-Zo5bpm3HLOhOj_dg.png" alt="d"></li>
+</ol>
+<p><img src="http://chuang.yinaun.com/FrmxUWmH1YWNeSnUwKJryQ6IVZuU.png" alt="d"></p>
+<ol start="4">
+<li>记住导入完后文件不要删除，别人浏览器就获取不到了还有就是只能访问谷歌页面</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>Google</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Oracle修改占用内存启动出错</title>
     <url>/posts/26515.html</url>
     <content><![CDATA[<meta name="referrer" content="no-referrer" />
@@ -117,25 +136,6 @@ Oracle 的memory_target参数设置必须大于等于sga_max_size，不小心设
 <blockquote>
 <p>创建的pfile 文件在 （<strong>解压的Oracle安装包目录</strong>/database/INITxxx.ORA）; 修改后使用命令将pfile 创建为spfile<br>然后使用命令启动数据库就行了</p>
 </blockquote>
-]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>Oracle</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Oracle内存占用过大</title>
-    <url>/posts/21786.html</url>
-    <content><![CDATA[<p>安装Oracle时，为了均衡电脑性能和数据库性能，Oracle一个实例默认内存占用大小为物理内存的1/8。</p>
-<p>如环境不需要分配那么大的内存来支撑Oracle，可通过修改 sga_max_size 的值来减少系统中内存占用过大问题。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cmd sqlplus system    --账户登录</span><br><span class="line"></span><br><span class="line">show parameter sga; --显示内存分配情况</span><br><span class="line"></span><br><span class="line">alter system set sga_max_size=200m scope=spfile; --修改占用内存的大小，根据需要设置</span><br><span class="line"></span><br><span class="line">alter system set memory_target = 200M scope=spfile;  --修改目标内存占用大小，根据需要设置</span><br><span class="line"></span><br><span class="line">重启oracle服务</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-
-<p><strong>注意：</strong><br><strong>sga_target &lt;= sga_max_size &lt;= memory_target &lt;= memory_max_target</strong></p>
-<h2 id="如果误修改导致数据库无法启动，按以下步骤处理："><a href="#如果误修改导致数据库无法启动，按以下步骤处理：" class="headerlink" title="如果误修改导致数据库无法启动，按以下步骤处理："></a>如果误修改导致数据库无法启动，按以下步骤处理：</h2><p>(解决SGA_MAX_SIZE 的大小比 MEMORY_TARGET 大导致数据无法启动的错误)</p>
-<p>由于数据库无法启动，只能调整编辑启动参数文件：<a href="/posts/26515.html">Oracle修改占用内存启动出错</a></p>
 ]]></content>
       <categories>
         <category>数据库</category>
