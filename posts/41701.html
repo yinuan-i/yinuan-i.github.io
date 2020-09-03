@@ -20,20 +20,24 @@
     var CONFIG = {"hostname":"blog.yinaun.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="什么是MVC这是一个和 web 应用相关的模式，不论是 java 开发（java 中的 web 框架采用就是这种模式），还是 python 开发。   M：Model &#x3D;&#x3D;&gt; 与数据库相关的模型层   V：Views &#x3D;&#x3D;&gt; 网页的地址，以及渲染网页等   C：Controller &#x3D;&#x3D;&gt; 访问网页地址后，读取页面数据，调用业务逻辑   初学者可能会把这个理解为三成架构 但是，这">
+  <meta name="description" content="简单的 Python 爬虫入门了解网页结构首先学习爬虫, 首先要懂的是网页.  访问网站显示那些优美的内容不是别的全都是一些代码. 这种代码我们称之为 HTML 使用python 请求网页本精习惯性用的是 requests 这个库，而不是使用Python自带的urllib 库，不为别的，就是requests太好用了 什么是requests？ requests中文文档  首先看看他官网的标题 Req">
 <meta property="og:type" content="article">
-<meta property="og:title" content="什么是MVC">
-<meta property="og:url" content="https://blog.yinaun.com/posts/57330.html">
+<meta property="og:title" content="简单的 Python 爬虫入门">
+<meta property="og:url" content="https://blog.yinaun.com/posts/41701.html">
 <meta property="og:site_name" content="Yinuan&#39; Blog">
-<meta property="og:description" content="什么是MVC这是一个和 web 应用相关的模式，不论是 java 开发（java 中的 web 框架采用就是这种模式），还是 python 开发。   M：Model &#x3D;&#x3D;&gt; 与数据库相关的模型层   V：Views &#x3D;&#x3D;&gt; 网页的地址，以及渲染网页等   C：Controller &#x3D;&#x3D;&gt; 访问网页地址后，读取页面数据，调用业务逻辑   初学者可能会把这个理解为三成架构 但是，这">
+<meta property="og:description" content="简单的 Python 爬虫入门了解网页结构首先学习爬虫, 首先要懂的是网页.  访问网站显示那些优美的内容不是别的全都是一些代码. 这种代码我们称之为 HTML 使用python 请求网页本精习惯性用的是 requests 这个库，而不是使用Python自带的urllib 库，不为别的，就是requests太好用了 什么是requests？ requests中文文档  首先看看他官网的标题 Req">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-09-02T12:55:00.000Z">
-<meta property="article:modified_time" content="2020-09-02T12:57:37.782Z">
+<meta property="og:image" content="https://chuang.yinaun.com/img/image-20200903225612075.png">
+<meta property="article:published_time" content="2020-09-03T14:47:00.000Z">
+<meta property="article:modified_time" content="2020-09-03T14:58:02.463Z">
 <meta property="article:author" content="Ytyy">
-<meta property="article:tag" content="MVC">
+<meta property="article:tag" content="爬虫">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="requests">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://chuang.yinaun.com/img/image-20200903225612075.png">
 
-<link rel="canonical" href="https://blog.yinaun.com/posts/57330.html">
+<link rel="canonical" href="https://blog.yinaun.com/posts/41701.html">
 
 
 <script id="page-configurations">
@@ -46,7 +50,7 @@
   };
 </script>
 
-  <title>什么是MVC | Yinuan' Blog</title>
+  <title>简单的 Python 爬虫入门 | Yinuan' Blog</title>
   
 
 
@@ -194,7 +198,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://blog.yinaun.com/posts/57330.html">
+    <link itemprop="mainEntityOfPage" href="https://blog.yinaun.com/posts/41701.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="http://q.qlogo.cn/headimg_dl?dst_uin=903292861&spec=640">
@@ -207,7 +211,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          什么是MVC
+          简单的 Python 爬虫入门
         </h1>
 
         <div class="post-meta">
@@ -218,7 +222,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-09-02 20:55:00 / 修改时间：20:57:37" itemprop="dateCreated datePublished" datetime="2020-09-02T20:55:00+08:00">2020-09-02</time>
+              <time title="创建时间：2020-09-03 22:47:00 / 修改时间：22:58:02" itemprop="dateCreated datePublished" datetime="2020-09-03T22:47:00+08:00">2020-09-03</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -226,7 +230,15 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a>
+                  <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/requests/" itemprop="url" rel="index"><span itemprop="name">requests</span></a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Python/requests/%E7%88%AC%E8%99%AB/" itemprop="url" rel="index"><span itemprop="name">爬虫</span></a>
                 </span>
             </span>
 
@@ -241,14 +253,56 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h3 id="什么是MVC"><a href="#什么是MVC" class="headerlink" title="什么是MVC"></a>什么是MVC</h3><p>这是一个和 web 应用相关的模式，不论是 java 开发（java 中的 web 框架采用就是这种模式），还是 python 开发。  </p>
-<p><strong>M</strong>：Model ==&gt; 与数据库相关的模型层  </p>
-<p><strong>V</strong>：Views ==&gt; 网页的地址，以及渲染网页等  </p>
-<p><strong>C</strong>：Controller ==&gt; 访问网页地址后，读取页面数据，调用业务逻辑  </p>
-<p>初学者可能会把这个理解为<strong>三成架构</strong> 但是，这俩完全不是一个东西</p>
-<h3 id="三成架构"><a href="#三成架构" class="headerlink" title="三成架构"></a>三成架构</h3><p>企业做开发时， 经常采用三成架构来分层 ：<strong>表示层、业务层、持久层。</strong>  表示层负责接收用户请求、转发请求、显示数据等；业务层负责组织业务逻辑；持久层负责持久化业务对象。  </p>
-<p>每一层都有不同的模式， 这就是架构模式，其中 表示层采用的架构模式就是MVC</p>
-<p>因此， <strong>MVC只是三层架构里的表示层的架构模式</strong></p>
+        <h1 id="简单的-Python-爬虫入门"><a href="#简单的-Python-爬虫入门" class="headerlink" title="简单的 Python 爬虫入门"></a>简单的 Python 爬虫入门</h1><h2 id="了解网页结构"><a href="#了解网页结构" class="headerlink" title="了解网页结构"></a>了解网页结构</h2><p>首先学习爬虫, 首先要懂的是网页.  访问网站显示那些优美的内容不是别的全都是一些代码. 这种代码我们称之为 <a target="_blank" rel="noopener" href="https://baike.baidu.com/item/HTML/97049?fr=aladdin">HTML</a></p>
+<h2 id="使用python-请求网页"><a href="#使用python-请求网页" class="headerlink" title="使用python 请求网页"></a>使用python 请求网页</h2><p>本精习惯性用的是 <code>requests</code> 这个库，而不是使用<code>Python</code>自带的<code>urllib</code> 库，不为别的，就是<code>requests</code>太好用了</p>
+<h3 id="什么是requests？"><a href="#什么是requests？" class="headerlink" title="什么是requests？"></a><strong>什么是requests？</strong></h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://requests.readthedocs.io/zh_CN/latest/user/quickstart.html">requests中文文档</a></p>
+</blockquote>
+<p>首先看看他官网的标题</p>
+<p><strong>Requests: 让 HTTP 服务人类</strong></p>
+<blockquote>
+<p><strong>根据他官方的解释说：</strong>  </p>
+</blockquote>
+<p>Requests 唯一的一个<strong>非转基因</strong>的 Python HTTP 库，人类可以安全享用。</p>
+<p>​            <strong>警告</strong>：非专业使用其他 HTTP 库会导致危险的副作用，包括：安全缺陷症、冗余代码症、重新发明轮子症、啃文档症、抑郁、头疼、甚至死亡。</p>
+<p>看吧，这就是 Requests 的威力</p>
+<a id="more"></a>
+
+<p>​    所以以下全部都是使用这个库</p>
+<h3 id="简单的发送一个-get-请求"><a href="#简单的发送一个-get-请求" class="headerlink" title="简单的发送一个 get 请求"></a>简单的发送一个 get 请求</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 首先使用得把 这个库导入</span></span><br><span class="line"><span class="keyword">import</span> requests <span class="keyword">as</span> req</span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义需要爬取发送请求的连接</span></span><br><span class="line">    <span class="comment"># 应为网速问题，所以我这写的是我自己内网的博客地址来爬取；</span></span><br><span class="line">    <span class="comment"># 这url内外网都一样，都是能去发送请求的；</span></span><br><span class="line">url = <span class="string">&#x27;http://localhost:4000&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 定义一个 get 请求，传入爬取的url</span></span><br><span class="line">    <span class="comment"># 它这返回的是响应码 （请求成功200）</span></span><br><span class="line">html = req.get(url=url)</span><br><span class="line"></span><br><span class="line"><span class="comment"># requests 默认编码是ISO-8859-1 也就是常说的西欧编码，对中文会显示乱码</span></span><br><span class="line">    <span class="comment"># 所以在这修改他返回的编码为 utf8 这个是通用编码</span></span><br><span class="line">html.encoding = <span class="string">&#x27;utf8&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 这如果只打印 html 的话，他只是显示响应码，</span></span><br><span class="line"><span class="comment"># 获取请求的html网页的使用.text</span></span><br><span class="line">print(html.text)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>requests在获取网络资源后，我们可以通过两种模式查看内容。</strong> </p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">区别</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">.text</td>
+<td align="center">返回的是处理过的Unicode型的数据 （<strong>源数据</strong>）</td>
+</tr>
+<tr>
+<td align="center">.content</td>
+<td align="center">返回的是bytes型的原始数据 (<strong>二进制</strong> )</td>
+</tr>
+</tbody></table>
+<p>当我们获取了这些内容是需要保存的</p>
+<blockquote>
+<p>继上面的代码</p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">with</span> open(<span class="string">&#x27;demo.html&#x27;</span>,<span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(html.content)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里demo.html 是保存的文件名</p>
+<p>wb    : 二进制写入， 覆盖  </p>
+</blockquote>
+<p>​                        执行完后在代码同级目录就会生成该文件</p>
+<p><img src="https://chuang.yinaun.com/img/image-20200903225612075.png" alt="image-20200903225612075"></p>
+<p><strong>记住，这里是以字节流(二进制)写入</strong></p>
 
     </div>
 
@@ -264,7 +318,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://blog.yinaun.com/posts/57330.html" title="什么是MVC">https://blog.yinaun.com/posts/57330.html</a>
+    <a href="https://blog.yinaun.com/posts/41701.html" title="简单的 Python 爬虫入门">https://blog.yinaun.com/posts/41701.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-CN" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -275,7 +329,9 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/MVC/" rel="tag"><i class="fa fa-tag"></i> MVC</a>
+              <a href="/tags/%E7%88%AC%E8%99%AB/" rel="tag"><i class="fa fa-tag"></i> 爬虫</a>
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/requests/" rel="tag"><i class="fa fa-tag"></i> requests</a>
           </div>
 
         
@@ -284,13 +340,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/posts/21786.html" rel="prev" title="Oracle内存占用过大">
-      <i class="fa fa-chevron-left"></i> Oracle内存占用过大
+    <a href="/posts/57330.html" rel="prev" title="什么是MVC">
+      <i class="fa fa-chevron-left"></i> 什么是MVC
     </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/41701.html" rel="next" title="简单的 Python 爬虫入门">
-      简单的 Python 爬虫入门 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -349,7 +402,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMVC"><span class="nav-number">1.</span> <span class="nav-text">什么是MVC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E6%88%90%E6%9E%B6%E6%9E%84"><span class="nav-number">2.</span> <span class="nav-text">三成架构</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84-Python-%E7%88%AC%E8%99%AB%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text">简单的 Python 爬虫入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%86%E8%A7%A3%E7%BD%91%E9%A1%B5%E7%BB%93%E6%9E%84"><span class="nav-number">1.1.</span> <span class="nav-text">了解网页结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8python-%E8%AF%B7%E6%B1%82%E7%BD%91%E9%A1%B5"><span class="nav-number">1.2.</span> <span class="nav-text">使用python 请求网页</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFrequests%EF%BC%9F"><span class="nav-number">1.2.1.</span> <span class="nav-text">什么是requests？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E5%8F%91%E9%80%81%E4%B8%80%E4%B8%AA-get-%E8%AF%B7%E6%B1%82"><span class="nav-number">1.2.2.</span> <span class="nav-text">简单的发送一个 get 请求</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
