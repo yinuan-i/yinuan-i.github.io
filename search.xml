@@ -270,8 +270,8 @@ Oracle 的memory_target参数设置必须大于等于sga_max_size，不小心设
 <p><strong>M</strong>：Model ==&gt; 与数据库相关的模型层  </p>
 <p><strong>V</strong>：Views ==&gt; 网页的地址，以及渲染网页等  </p>
 <p><strong>C</strong>：Controller ==&gt; 访问网页地址后，读取页面数据，调用业务逻辑  </p>
-<p>初学者可能会把这个理解为<strong>三成架构</strong> 但是，这俩完全不是一个东西</p>
-<h3 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h3><p>企业做开发时， 经常采用三成架构来分层 ：<strong>表示层、业务层、持久层。</strong>  表示层负责接收用户请求、转发请求、显示数据等；业务层负责组织业务逻辑；持久层负责持久化业务对象。  </p>
+<p>初学者可能会把这个理解为<strong>三层架构</strong> 但是，这俩完全不是一个东西</p>
+<h3 id="三层架构"><a href="#三层架构" class="headerlink" title="三层架构"></a>三层架构</h3><p>企业做开发时， 经常采用三层架构来分层 ：<strong>表示层、业务层、持久层。</strong>  表示层负责接收用户请求、转发请求、显示数据等；业务层负责组织业务逻辑；持久层负责持久化业务对象。  </p>
 <p>每一层都有不同的模式， 这就是架构模式，其中 表示层采用的架构模式就是MVC</p>
 <p>因此， <strong>MVC只是三层架构里的表示层的架构模式</strong></p>
 ]]></content>
