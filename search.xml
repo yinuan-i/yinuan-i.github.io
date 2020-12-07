@@ -574,6 +574,7 @@ Oracle 的memory_target参数设置必须大于等于sga_max_size，不小心设
 <p><img src="https://chuang.yinaun.com/image/image-20201124141138047.png" alt="image-20201124141138047"></p>
 <p>1.4 修改表内容</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta">mysql&gt;</span><span class="bash">update user <span class="built_in">set</span> host = <span class="string">&#x27;%&#x27;</span> <span class="built_in">where</span> user = <span class="string">&#x27;root&#x27;</span>;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 
 <p>这个表示允许用户root从任何主机连接mysql服务器</p>
 <p><img src="https://chuang.yinaun.com/image/image-20201124141240603.png" alt="image-20201124141240603"></p>
